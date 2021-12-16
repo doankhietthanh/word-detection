@@ -4,9 +4,8 @@ import HighLight from "../components/HighLight";
 import TextArea from "../components/TextArea";
 
 const Container = styled.div`
-  flex: 3;
+  flex: 4;
   height: 100%;
-  background-color: red;
 
   display: flex;
   justify-content: center;
@@ -15,11 +14,11 @@ const Container = styled.div`
   position: relative;
 `;
 
-const Main = () => {
+const Main = ({ text, setText, words, color }) => {
   return (
     <Container>
-      <TextArea />
-      <HighLight />
+      <TextArea text={text} setText={setText}></TextArea>
+      <HighLight text={text} words={words} color={color} />
     </Container>
   );
 };
